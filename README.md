@@ -1,6 +1,6 @@
 # CRUD-localStorage-exemple
 ### Basic CRUD model using React, Redux, axios, localstorage as a fake db, picsum API for random post image, styled with React bootstrap and SCSS.  
-  
+
 ### Possible actions :  
 - Post or Edit article (title + content)  
 -	Remove article  
@@ -8,6 +8,8 @@
 
 The post image is fetched randomly with picsum API :
 https://picsum.photos/
+
+You can find a version that use Json Server as fake db here : https://github.com/nnieddu/CRUD-exemple
 
 <!-- You can try it online here :
 https://nnieddu.github.io/CRUD/ -->
