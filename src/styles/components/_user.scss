@@ -1,0 +1,20 @@
+.user {
+	  color: $font-color-light;
+    text-align: center;
+		margin-right: 3%;
+  h4 {
+    font-size: 1.2rem;
+		margin-bottom: 10px;
+		line-height: 1;
+  }
+
+  img {
+    border-radius: 10px;
+    height: 48px;
+  }
+
+  p {
+    font-size: 1.15rem;
+		line-height: 0.5;
+  }
+}
