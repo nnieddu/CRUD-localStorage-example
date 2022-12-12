@@ -14,7 +14,7 @@ You can find a version that use Json Server as fake db here : https://github.com
 <!-- You can try it online here :
 https://nnieddu.github.io/CRUD/ -->
 
-To try it on your machine clone this repo then in the folder :
+To try it on your machine, clone this repo then in the folder :
 ```
 npm install
 npm start
