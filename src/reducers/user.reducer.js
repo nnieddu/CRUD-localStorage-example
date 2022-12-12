@@ -1,4 +1,4 @@
-import { ADD_USER_LIKE, GET_USER } from "../actions/user.actions";
+import { ADD_USER_LIKE, REMOVE_USER_LIKE, GET_USER } from "../actions/user.actions";
 
 const initialState = {};
 
@@ -15,6 +15,15 @@ export default function userReducer(state = initialState, action) {
           };
         } else return user;
       });
+			case REMOVE_USER_LIKE:
+				return state.map((user) => {
+					if (user.id === action.payload.authorID) {
+						return {
+							...user,
+							likes: action.newLikeValue,
+						};
+					} else return user;
+				});
     default:
       return state;
   }

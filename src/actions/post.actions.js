@@ -59,10 +59,9 @@ export const editPost = (data) => {
         if (o.id === data.id) {
           posts[i].title = data.title;
           posts[i].content = data.content;
-          return true; // stop searching
+          return true;
         }
-        return false; // if edited post don't exist, normally impossible
-        // but find expect a return so return false to avoid warning;
+        return false;
       });
       localStorage.setItem("posts", JSON.stringify(posts));
       /// -----------------------------------------------
@@ -91,10 +90,9 @@ export const deletePost = (postId) => {
 				if (o.id === postId) {
 					posts.splice(i, 1);
 					dispatch({ type: DELETE_POST, payload: { postId } });
-          return true; // stop searching
+          return true;
         }
-        return false; // if edited post don't exist, normally impossible
-        // but find expect a return so return false to avoid warning;
+        return false;
       });
       localStorage.setItem("posts", JSON.stringify(posts));
       /// -----------------------------------------------
@@ -112,10 +110,9 @@ export const addLike = (data) => {
       posts.find((o, i) => {
         if (o.id === data.id) {
           posts[i].likes = data.likes;
-          return true; // stop searching
+          return true;
         }
-        return false; // if edited post don't exist, normally impossible
-        // but find expect a return so return false to avoid warning;
+        return false;
       });
       localStorage.setItem("posts", JSON.stringify(posts));
       /// -----------------------------------------------			

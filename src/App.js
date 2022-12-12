@@ -28,8 +28,8 @@ const App = () => {
           <Modal.Title>Informations</Modal.Title>
         </Modal.Header>
         <Modal.Body >
-          Tout ce que vous écrivez ici sera stocké localement sur votre périphérique. <br/>
-          <strong>Personne d'autre ne pourra le voir. </strong><br/><br/>
+          Tout ce que vous écrivez ici sera stocké localement sur votre périphérique.
+          <strong> Personne d'autre ne pourra le voir. </strong><br/><br/>
 					Il n'y a pour l'instant pas de mécanisme ou sécurité si le localStorage est plein. <br/>
         </Modal.Body>
         <Modal.Footer>

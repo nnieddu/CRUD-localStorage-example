@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deletePost, editPost } from "../actions/post.actions";
+import { removeUserLike } from "../actions/user.actions";
 import Like from "./Like";
 import { isEmpty } from "./Utils";
 
@@ -43,7 +44,7 @@ const Post = ({ post }) => {
           />
           <img
             onClick={() => {
-              dispatch(deletePost(post.id)) && setEditToggle(false);
+              dispatch(deletePost(post.id)) && dispatch(removeUserLike(post)) && setEditToggle(false);
             }}
             src="./icons/delete.svg"
             alt="delete"

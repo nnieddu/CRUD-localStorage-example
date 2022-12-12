@@ -9,6 +9,7 @@ users = JSON.parse(localStorage.getItem("users"));
 
 export const GET_USER = "GET_USER";
 export const ADD_USER_LIKE = "ADD_USER_LIKE";
+export const REMOVE_USER_LIKE = "REMOVE_USER_LIKE";
 
 export const getUser = () => {
   /// -----------------------------------------------
@@ -38,10 +39,9 @@ export const addUserLike = (data) => {
       users.find((o, i) => {
         if (o.id === data.id) {
           users[i].likes = data.likes;
-          return true; // stop searching
+          return true;
         }
-        return false; // if edited post don't exist, normally impossible
-        // but find expect a return so return false to avoid warning;
+        return false;
       });
       localStorage.setItem("users", JSON.stringify(users));
       /// -----------------------------------------------
@@ -51,6 +51,33 @@ export const addUserLike = (data) => {
       //   data: { ...data },
       // });
       dispatch({ type: ADD_USER_LIKE, payload: { ...data } });
+    } catch (err) {
+      return console.log(err);
+    }
+  };
+};
+
+export const removeUserLike = (post) => {
+  return async (dispatch) => {
+		var newLikeValue = 0; ///
+    try {
+      /// -----------------------------------------------
+      users.find((o, i) => {
+        if (o.id === post.authorID) {
+          users[i].likes -= post.likes;
+					newLikeValue = users[i].likes;
+          return true;
+        }
+        return false;
+      });
+      localStorage.setItem("users", JSON.stringify(users));
+      /// -----------------------------------------------
+      // await axios({
+      //   method: "put",
+      //   url: `http://localhost:3003/users/${data.id}`,
+      //   data: { ...data },
+      // });
+      dispatch({ type: REMOVE_USER_LIKE, payload: post, newLikeValue: newLikeValue});
     } catch (err) {
       return console.log(err);
     }
