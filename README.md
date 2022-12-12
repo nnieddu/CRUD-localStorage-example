@@ -9,8 +9,8 @@
 The post image is fetched randomly with picsum API :
 https://picsum.photos/
 
-You can try it online here :
-https://nnieddu.github.io/CRUD/
+<!-- You can try it online here :
+https://nnieddu.github.io/CRUD/ -->
 
 To try it on your machine clone this repo then in the folder :
 ```
