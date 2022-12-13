@@ -12,7 +12,7 @@ https://picsum.photos/
 You can try it online here :
 https://nnieddu.github.io/CRUD/
 
-You can find a version that use Json Server as fake db here : https://github.com/nnieddu/CRUD-exemple
+You can find a version that use Json Server as fake db here :   
 https://github.com/nnieddu/CRUD-exemple
 
 To try it on your machine clone this repo then in the folder :
