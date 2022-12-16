@@ -1,4 +1,7 @@
 # CRUD-localStorage-exemple
+
+### New / Last version with "modern" redux toolkit style and Electron build available https://github.com/nnieddu/CRUD-localStorage-RTK-ElectronJs
+
 ### Basic CRUD model using React, Redux, axios, localstorage as a fake db, picsum API for random post image, styled with React bootstrap and SCSS.  
   
 ### Possible actions :  
