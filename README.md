@@ -1,4 +1,4 @@
-# CRUD-localStorage-exemple
+# CRUD-localStorage-example
   
 ### Basic CRUD model using React, Redux, axios, localstorage as a fake db, picsum API for random post image, styled with React bootstrap and SCSS.  
     
